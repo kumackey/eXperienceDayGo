@@ -1,13 +1,14 @@
 package main
 
 import (
+	"context"
 	"fmt"
 	"sync"
 )
 
 var wg sync.WaitGroup
 
-func generator(done chan struct{}, num int) <-chan int {
+func generator(ctx context.Context, num int) <-chan int {
 	out := make(chan int)
 	go func() {
 		defer wg.Done()
@@ -15,7 +16,7 @@ func generator(done chan struct{}, num int) <-chan int {
 	LOOP:
 		for {
 			select {
-			case <-done: // doneチャネルがcloseされたらbreakが実行される
+			case <-ctx.Done():
 				break LOOP
 			case out <- num: // キャンセルされてなければnumを送信
 			}
@@ -28,15 +29,15 @@ func generator(done chan struct{}, num int) <-chan int {
 }
 
 func main() {
-	done := make(chan struct{})
-	gen := generator(done, 1)
+	ctx, cancel := context.WithCancel(context.Background())
+	gen := generator(ctx, 1)
 
 	wg.Add(1)
 
 	for i := 0; i < 5; i++ {
 		fmt.Println(<-gen)
 	}
-	close(done) // 5回genを使ったら、doneチャネルをcloseしてキャンセルを実行
+	cancel()
 
 	wg.Wait()
 }
