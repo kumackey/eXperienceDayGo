@@ -18,3 +18,7 @@ func (r IntClosedRange) Upper() int {
 func (r IntClosedRange) Notation() string {
 	return "[" + strconv.Itoa(r.min) + "," + strconv.Itoa(r.max) + "]"
 }
+
+func (r IntClosedRange) Includes(i int) bool {
+	return r.min <= i && i <= r.max
+}

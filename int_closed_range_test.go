@@ -18,3 +18,9 @@ func TestIntClosedRange_Notaion(t *testing.T) {
 	icRange = IntClosedRange{2, 8}
 	assert.Equal(t, "[2,8]", icRange.Notation())
 }
+
+func TestIntClosedRange_Includes(t *testing.T) {
+	icRange := IntClosedRange{3, 7}
+	assert.True(t, icRange.Includes(5))
+	assert.False(t, icRange.Includes(1))
+}
