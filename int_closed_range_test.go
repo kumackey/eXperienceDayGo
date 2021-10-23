@@ -14,11 +14,11 @@ func (suite *intClosedRangeSuite) SetupSuite() {
 	suite.icRange = IntClosedRange{3, 7}
 }
 
-func (suite *intClosedRangeSuite) Test_Lowerメソッドは下端点3を返せる() {
+func (suite *intClosedRangeSuite) Test_整数閉区間は下端点3を持つ() {
 	suite.Equal(3, suite.icRange.Lower())
 }
 
-func (suite *intClosedRangeSuite) Test_Upperメソッドは上端点7を返せる() {
+func (suite *intClosedRangeSuite) Test_Upperメソッドは上端点7を持つ() {
 	suite.Equal(7, suite.icRange.Upper())
 }
 
