@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestSomething(t *testing.T) {
-	// assert equality
-	assert.Equal(t, 123, 123)
+func TestIntClosedRange(t *testing.T) {
+	var icRange IntClosedRange
+	assert.Equal(t, 3, icRange.lower())
 }
