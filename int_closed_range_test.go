@@ -5,8 +5,13 @@ import (
 	"testing"
 )
 
-func TestIntClosedRange(t *testing.T) {
+func TestIntClosedRange_LowerAndUpper(t *testing.T) {
 	icRange := IntClosedRange{3, 7}
-	assert.Equal(t, 3, icRange.lower())
-	assert.Equal(t, 7, icRange.upper())
+	assert.Equal(t, 3, icRange.Lower())
+	assert.Equal(t, 7, icRange.Upper())
+}
+
+func TestIntClosedRange_Notaion(t *testing.T) {
+	icRange := IntClosedRange{3, 7}
+	assert.Equal(t, "[3,7]", icRange.Notation())
 }
