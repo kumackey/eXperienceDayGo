@@ -3,22 +3,23 @@ package main
 import "strconv"
 
 type IntClosedRange struct {
-	min int
-	max int
+	lower int
+	upper int
 }
 
 func (r IntClosedRange) Lower() int {
-	return r.min
+	return r.lower
 }
 
 func (r IntClosedRange) Upper() int {
-	return r.max
+	return r.upper
 }
 
 func (r IntClosedRange) Notation() string {
-	return "[" + strconv.Itoa(r.min) + "," + strconv.Itoa(r.max) + "]"
+	// 文字列と数字の結合はgoでは地道な方法しかなかった
+	return "[" + strconv.Itoa(r.lower) + "," + strconv.Itoa(r.upper) + "]"
 }
 
 func (r IntClosedRange) Includes(i int) bool {
-	return r.min <= i && i <= r.max
+	return r.lower <= i && i <= r.upper
 }
