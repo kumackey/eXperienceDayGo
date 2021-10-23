@@ -1,5 +1,7 @@
 package main
 
+import "strconv"
+
 type IntClosedRange struct {
 	min int
 	max int
@@ -14,5 +16,5 @@ func (r IntClosedRange) Upper() int {
 }
 
 func (r IntClosedRange) Notation() string {
-	return "[3,7]"
+	return "[" + strconv.Itoa(r.min) + "," + strconv.Itoa(r.max) + "]"
 }

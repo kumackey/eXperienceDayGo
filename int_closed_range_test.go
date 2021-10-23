@@ -14,4 +14,7 @@ func TestIntClosedRange_LowerAndUpper(t *testing.T) {
 func TestIntClosedRange_Notaion(t *testing.T) {
 	icRange := IntClosedRange{3, 7}
 	assert.Equal(t, "[3,7]", icRange.Notation())
+
+	icRange = IntClosedRange{2, 8}
+	assert.Equal(t, "[2,8]", icRange.Notation())
 }
