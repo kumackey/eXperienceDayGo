@@ -22,5 +22,6 @@ func TestIntClosedRange_Notaion(t *testing.T) {
 func TestIntClosedRange_Includes(t *testing.T) {
 	icRange := IntClosedRange{3, 7}
 	assert.True(t, icRange.Includes(5))
-	assert.False(t, icRange.Includes(1))
+	assert.True(t, icRange.Includes(3))
+	assert.False(t, icRange.Includes(2))
 }
