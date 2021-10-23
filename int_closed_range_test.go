@@ -44,6 +44,6 @@ func (suite *intClosedRangeSuite) Test_整数閉区間は指定した整数を�
 	}
 }
 
-func TestIntClosedRangeSuite(t *testing.T) {
+func Test_整数閉区間を表す(t *testing.T) {
 	suite.Run(t, new(intClosedRangeSuite))
 }
