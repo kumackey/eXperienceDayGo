@@ -6,6 +6,7 @@ import (
 )
 
 func TestIntClosedRange(t *testing.T) {
-	var icRange IntClosedRange
+	icRange := IntClosedRange{3, 7}
 	assert.Equal(t, 3, icRange.lower())
+	assert.Equal(t, 7, icRange.upper())
 }
