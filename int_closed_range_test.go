@@ -14,23 +14,24 @@ func (suite *intClosedRangeSuite) SetupSuite() {
 	suite.icRange = IntClosedRange{3, 7}
 }
 
-func (suite *intClosedRangeSuite) Test_整数閉区間は下端点を持つ() {
+func (suite *intClosedRangeSuite) Test_Lowerメソッドは下端点3を返せる() {
 	suite.Equal(3, suite.icRange.Lower())
 }
 
-func (suite *intClosedRangeSuite) Test_整数閉区間は上端点を持つ() {
+func (suite *intClosedRangeSuite) Test_Upperメソッドは上端点7を返せる() {
 	suite.Equal(7, suite.icRange.Upper())
 }
 
-func (suite *intClosedRangeSuite) Test_整数閉区間の文字列表記を返せる() {
+func (suite *intClosedRangeSuite) Test_Notationメソッドは文字列表記を返せる() {
 	suite.Equal("[3,7]", suite.icRange.Notation())
 }
 
-func (suite *intClosedRangeSuite) Test_整数閉区間は指定した整数を含むか判定できる() {
+func (suite *intClosedRangeSuite) Test_Includesメソッドは指定した整数を含むか判定できる() {
 	tests := map[string]struct {
 		input    int
 		includes bool
 	}{
+		"9は含まれない":   {9, false},
 		"5は含まれる":    {5, true},
 		"1は含まれない":   {1, false},
 		"下端点3は含まれる": {3, true},

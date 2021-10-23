@@ -1,0 +1,21 @@
+=== RUN   Test_整数閉区間を表す
+--- PASS: Test_整数閉区間を表す (0.00s)
+=== RUN   Test_整数閉区間を表す/Test_Includesメソッドは指定した整数を含むか判定できる
+    --- PASS: Test_整数閉区間を表す/Test_Includesメソッドは指定した整数を含むか判定できる (0.00s)
+=== RUN   Test_整数閉区間を表す/Test_Includesメソッドは指定した整数を含むか判定できる/9は含まれない
+        --- PASS: Test_整数閉区間を表す/Test_Includesメソッドは指定した整数を含むか判定できる/9は含まれない (0.00s)
+=== RUN   Test_整数閉区間を表す/Test_Includesメソッドは指定した整数を含むか判定できる/5は含まれる
+        --- PASS: Test_整数閉区間を表す/Test_Includesメソッドは指定した整数を含むか判定できる/5は含まれる (0.00s)
+=== RUN   Test_整数閉区間を表す/Test_Includesメソッドは指定した整数を含むか判定できる/1は含まれない
+        --- PASS: Test_整数閉区間を表す/Test_Includesメソッドは指定した整数を含むか判定できる/1は含まれない (0.00s)
+=== RUN   Test_整数閉区間を表す/Test_Includesメソッドは指定した整数を含むか判定できる/下端点3は含まれる
+        --- PASS: Test_整数閉区間を表す/Test_Includesメソッドは指定した整数を含むか判定できる/下端点3は含まれる (0.00s)
+=== RUN   Test_整数閉区間を表す/Test_Includesメソッドは指定した整数を含むか判定できる/上端点7は含まれる
+        --- PASS: Test_整数閉区間を表す/Test_Includesメソッドは指定した整数を含むか判定できる/上端点7は含まれる (0.00s)
+=== RUN   Test_整数閉区間を表す/Test_Lowerメソッドは下端点3を返せる
+    --- PASS: Test_整数閉区間を表す/Test_Lowerメソッドは下端点3を返せる (0.00s)
+=== RUN   Test_整数閉区間を表す/Test_Notationメソッドは文字列表記を返せる
+    --- PASS: Test_整数閉区間を表す/Test_Notationメソッドは文字列表記を返せる (0.00s)
+=== RUN   Test_整数閉区間を表す/Test_Upperメソッドは上端点7を返せる
+    --- PASS: Test_整数閉区間を表す/Test_Upperメソッドは上端点7を返せる (0.00s)
+PASS
